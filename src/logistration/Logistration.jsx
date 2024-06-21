@@ -102,6 +102,7 @@ const Logistration = (props) => {
         {disablePublicAccountCreation
           ? (
             <>
+              <h1>Test</h1>
               {institutionLogin && (
                 <Tabs defaultActiveKey="" id="controlled-tab" onSelect={handleInstitutionLogin}>
                   <Tab title={tabTitle} eventKey={LOGIN_PAGE} />
