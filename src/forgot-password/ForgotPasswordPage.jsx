@@ -106,7 +106,6 @@ const ForgotPasswordPage = (props) => {
           <Tab title={tabTitle} eventKey={LOGIN_PAGE} />
         </Tabs>
         <div id="main-content test" className="main-content">
-          <h1>Testsing</h1>
           <Form id="forget-password-form" name="forget-password-form" className="mw-xs">
             <ForgotPasswordAlert email={bannerEmail} emailError={formErrors} status={status} />
             <h2 className="h4">
