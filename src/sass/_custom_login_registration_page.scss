@@ -1,0 +1,104 @@
+.login-registration-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 490px;
+  box-shadow: 0px 1px 2px 0px #00000026;
+  box-shadow: 0px 1px 4px 0px #00000026;
+  background-color: white;
+  border-radius: 4px;
+  .login-registration-card {
+    padding: 32px;
+    font-size: 0.875rem;
+    .btn {
+      font-size: 14px;
+    }
+  }
+}
+
+.login-registration-header {
+  margin: 0 auto;
+  max-width: 320px;
+  margin-bottom: 72px;
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  p {
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+.login-page-description-wrapper {
+  width: 100%;
+  @include media-breakpoint-up('lg') {
+    width: 50%;
+  }
+  .login-page-description {
+    @include media-breakpoint-up('lg') {
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: left;
+      margin-top: 30px;
+      @include media-breakpoint-up('lg') {
+        margin-top: 0;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 100px;
+      }
+    }
+  }
+}
+
+.forgot-password-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 490px;
+  box-shadow: 0px 1px 2px 0px #00000026;
+  box-shadow: 0px 1px 4px 0px #00000026;
+  background-color: white;
+  border-radius: 4px;
+  padding: 32px;
+
+  .nav-link {
+    margin-bottom: 24px;
+  }
+  .forget-password-form {
+    max-width: 428px;
+  }
+  a {
+    font-size: 0.875rem;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $brand;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+  .btn {
+    font-size: 0.875rem;
+  }
+  .forgot-password-button {
+    margin-bottom: 24px;
+  }
+}
+// body {
+//   background: url('../../docs/images/registration-bg.jpg');
+//   background-position: center top;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+// }
