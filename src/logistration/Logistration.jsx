@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
@@ -26,7 +27,7 @@ import {
 } from '../data/utils';
 import { LoginPage } from '../login';
 import { backupLoginForm } from '../login/data/actions';
-import { RegistrationPage } from '../register';
+// import { RegistrationPage } from '../register';
 import { backupRegistrationForm } from '../register/data/actions';
 
 const Logistration = (props) => {
@@ -116,13 +117,13 @@ const Logistration = (props) => {
             </>
           )
           : (
-            <div className='login-registration-wrapper'>
-              <div className='login-registration-header'>
+            <div className="login-registration-wrapper">
+              <div className="login-registration-header">
                 <h1>Get Started Now</h1>
                 <p>Welcome to our service, please log in or register to start your experience.</p>
               </div>
-              <div className='login-registration-card-wrapper'>
-                <div className='login-registration-card'>
+              <div className="login-registration-card-wrapper">
+                <div className="login-registration-card">
 
                   {institutionLogin
                     ? (
@@ -132,7 +133,7 @@ const Logistration = (props) => {
                     )
                     : (!isValidTpaHint() && !hideRegistrationLink && (
                       <Tabs defaultActiveKey={selectedPage} id="controlled-tab" onSelect={(tabKey) => handleOnSelect(tabKey, selectedPage)}>
-                        <Tab title={formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} />
+                        {/* <Tab title={formatMessage(messages['logistration.register'])} eventKey={REGISTER_PAGE} /> */}
                         <Tab title={formatMessage(messages['logistration.sign.in'])} eventKey={LOGIN_PAGE} />
                       </Tabs>
                     ))}
@@ -147,11 +148,7 @@ const Logistration = (props) => {
                     )}
                     {selectedPage === LOGIN_PAGE
                       ? <LoginPage institutionLogin={institutionLogin} handleInstitutionLogin={handleInstitutionLogin} />
-                      : (
-                        <RegistrationPage
-                          institutionLogin={institutionLogin}
-                          handleInstitutionLogin={handleInstitutionLogin}
-                        />
+                      : (<LoginPage institutionLogin={institutionLogin} handleInstitutionLogin={handleInstitutionLogin} />
                       )}
                   </div>
                 </div>

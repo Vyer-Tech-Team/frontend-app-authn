@@ -6,7 +6,9 @@ import { Helmet } from 'react-helmet';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import {
-  EmbeddedRegistrationRoute, NotFoundPage, registerIcons, UnAuthOnlyRoute, Zendesk,
+  // EmbeddedRegistrationRoute,
+  NotFoundPage, registerIcons,
+  UnAuthOnlyRoute, Zendesk,
 } from './common-components';
 import configureStore from './data/configureStore';
 import {
@@ -15,7 +17,7 @@ import {
   PAGE_NOT_FOUND,
   PASSWORD_RESET_CONFIRM,
   RECOMMENDATIONS,
-  REGISTER_EMBEDDED_PAGE,
+  // REGISTER_EMBEDDED_PAGE,
   REGISTER_PAGE,
   RESET_PAGE,
 } from './data/constants';
@@ -24,7 +26,7 @@ import { ForgotPasswordPage } from './forgot-password';
 import Logistration from './logistration/Logistration';
 import { ProgressiveProfiling } from './progressive-profiling';
 import { RecommendationsPage } from './recommendations';
-import { RegistrationPage } from './register';
+// import { RegistrationPage } from './register';
 import { ResetPasswordPage } from './reset-password';
 
 import './index.scss';
@@ -39,10 +41,10 @@ const MainApp = () => (
     {getConfig().ZENDESK_KEY && <Zendesk />}
     <Routes>
       <Route path="/" element={<Navigate replace to={updatePathWithQueryParams(REGISTER_PAGE)} />} />
-      <Route
+      {/* <Route
         path={REGISTER_EMBEDDED_PAGE}
         element={<EmbeddedRegistrationRoute><RegistrationPage /></EmbeddedRegistrationRoute>}
-      />
+      /> */}
       <Route
         path={LOGIN_PAGE}
         element={
